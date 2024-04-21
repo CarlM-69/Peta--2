@@ -1,0 +1,14 @@
+* {
+    font-family: "Poppins-Regular";
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+/* Navigation Bar */
+
