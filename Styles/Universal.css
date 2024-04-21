@@ -1,14 +1,79 @@
 * {
-    font-family: "Poppins-Regular";
+	font-family: "Poppins-Regular";
+	user-select: none;
 }
 
 html {
-    scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
+	margin: 0;
 }
 
 /* Navigation Bar */
 
+.navbar {
+	margin-top: 1.3rem;
+	height: 80px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.navbar .logo {
+	flex: 25%;
+	display: flex;
+	justify-content: center;
+}
+
+.navbar .menu {
+	flex: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+.navbar .portal {
+	flex: 25%;
+	display: flex;
+	justify-content: center;
+}
+
+.navbar .logo img {
+	height: 60px;
+	width: 60px;
+}
+
+.navbar .menu ul, .navbar .portal ul {
+	list-style-type: none;
+}
+
+.navbar .menu ul li:not(#active), .navbar .portal ul li:not(#active) {
+	display: inline;
+	cursor: pointer;
+	padding: 10px 10px;
+	margin: 0 10px;
+	font-size: 1rem;
+	align-self: center;
+}
+
+.navbar .menu ul li#active, .navbar .portal ul li#active {
+	display: inline;
+	padding: 10px 10px;
+	margin: 0 10px;
+	font-family: "Poppins-Black";
+	font-size: 1.2rem;
+	color: olivedrab;
+	align-self: center;
+}
+
+.navbar .menu ul li a, .navbar .portal ul li a {
+	text-decoration: none;
+	color: beige;
+	transition: all 0.3s;
+}
+
+.navbar .menu ul li:not(#active):hover a, .navbar .portal ul li:not(#active):hover a {
+	color: mediumseagreen;
+}
