@@ -1,0 +1,21 @@
+body {
+	background: url("../Resources/Stock-Images/background.png") no-repeat center bottom;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* Sections */
+
+.section:nth-child(1) {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+.section:nth-child(2) {
+	height: 100vh;
+	width: 100%;
+	background: black;
+}
+
+/* Magic */
