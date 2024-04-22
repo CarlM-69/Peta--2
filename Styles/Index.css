@@ -1,11 +1,11 @@
 body {
-    background: url("../Resources/Stock-Images/background_1.png") no-repeat center center;
+    background: url("../Resources/Stock-Images/background.jpeg") no-repeat center center;
     background-size: cover;
 }
 
 /* Sections */
 
 .section:nth-child(1) {
-    height: 100vh;
+    height: 90vh;
     width: 100%;
 }
