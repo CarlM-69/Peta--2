@@ -11,6 +11,29 @@ body {
 	margin: 0;
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar {
+	width: 1vh;
+	height: 1vh;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(48, 72, 52);
+	background-clip: padding-box;
+	border: 2px solid transparent;
+	border-radius: 20%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(59, 103, 65);
+	border: 0;
+}
+
+::-webkit-scrollbar-track {
+	background: black;
+}
+
 /* Navigation Bar */
 
 .navbar {
