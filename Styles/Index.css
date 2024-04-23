@@ -19,18 +19,19 @@ body {
 	width: 100%;
 }
 
-/* .section:nth-child(3) {
-
-} */
+.section:nth-child(3) {
+	height: 100vh;
+	width: 100%;
+}
 
 /* Magic */
 
 .go-back {
 	z-index: 999;
 	position: absolute;
-	bottom: -110vh;
+	bottom: -200vh;
 	right: 0;
-	height: 90%;
+	height: 200%;
 	width: 10%;
 	display: flex;
 	justify-content: right;
