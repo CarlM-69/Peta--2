@@ -14,16 +14,25 @@ body {
 }
 
 .section:nth-child(2) {
-	margin-top: 10vh;
-	height: 101vh;
+	height: 111vh;
 	width: 100%;
+	margin-top: 10vh;
 }
 
 .section:nth-child(3) {
-	background: url("../Resources/Stock-Images/background-2.jpeg") no-repeat center bottom;
-	background-size: cover;
 	height: 100vh;
 	width: 100%;
+	background: beige;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(4) {
+	height: 100vh;
+	width: 100%;
+	background: url("../Resources/Stock-Images/background-2.jpeg") no-repeat center bottom;
+	background-size: cover;
 }
 
 /* Magic */
@@ -31,9 +40,9 @@ body {
 .go-back {
 	z-index: 999;
 	position: absolute;
-	bottom: -200vh;
+	bottom: -300vh;
 	right: 0;
-	height: 200%;
+	height: 300%;
 	width: 10%;
 	display: flex;
 	justify-content: right;
@@ -127,7 +136,7 @@ body {
 }
 
 .section:nth-child(2) .slides .slide .img-container1  {
-	background: url("../../Resources/Stock-Images/Image_1.jpg") no-repeat center center;
+	background: url("../../Resources/Stock-Images/Image_1.jpg") no-repeat center bottom;
 	background-size: cover;
 	height: 100%;
 	width: 100%;
@@ -137,7 +146,7 @@ body {
 }
 
 .section:nth-child(2) .slides .slide .img-container2  {
-	background: url("../../Resources/Stock-Images/Image_2.jpg") no-repeat center center;
+	background: url("../../Resources/Stock-Images/Image_2.jpg") no-repeat center bottom;
 	background-size: cover;
 	height: 100%;
 	width: 100%;
@@ -196,7 +205,7 @@ body {
 	display: block;
 	font-family: "Poppins-Black";
 	font-size: 2rem;
-	color: bisque;
+	color: beige;
 	text-shadow: 0 0 25px rgb(0, 0, 0);
 }
 
@@ -304,6 +313,15 @@ body {
 }
 
 .section:nth-child(3) .content {
+	height: 90%;
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	border: 3px solid rgb(176, 176, 163);
+	border-radius: 10px;
+}
+
+.section:nth-child(4) .content {
 	height: 100%;
 	width: 100%;
 	display: flex;
@@ -312,7 +330,7 @@ body {
 	align-items: center;
 }
 
-.section:nth-child(3) .content .mission {
+.section:nth-child(4) .content .mission {
 	z-index: 1;
 	flex: 50%;
 	display: flex;
@@ -321,7 +339,7 @@ body {
 	align-items: center;
 }
 
-.section:nth-child(3) .content .vision {
+.section:nth-child(4) .content .vision {
 	z-index: 1;
 	flex: 50%;
 	display: flex;
@@ -330,8 +348,8 @@ body {
 	align-items: center;
 }
 
-.section:nth-child(3) .content .mission span:first-child,
-.section:nth-child(3) .content .vision span:first-child {
+.section:nth-child(4) .content .mission span:first-child,
+.section:nth-child(4) .content .vision span:first-child {
 	color: beige;
 	font-family: "Poppins-Black";
 	font-size: 1.5rem;
@@ -340,15 +358,15 @@ body {
 	text-align: center;
 }
 
-.section:nth-child(3) .content .mission span:last-child,
-.section:nth-child(3) .content .vision span:last-child {
+.section:nth-child(4) .content .mission span:last-child,
+.section:nth-child(4) .content .vision span:last-child {
 	color: blanchedalmond;
 	font-family: "Poppins-Thin";
 	width: 60%;
 	text-align: center;
 }
 
-.section:nth-child(3) .content .shadow {
+.section:nth-child(4) .content .shadow {
 	z-index: 0;
 	position: absolute;
 	height: 100%;
