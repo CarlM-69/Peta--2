@@ -36,8 +36,8 @@ body {
 /* Navigation Bar */
 
 .navbar {
-	margin-top: 1rem;
-	height: 100px;
+	margin-top: 0.5rem;
+	height: 70px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -48,9 +48,13 @@ body {
 	z-index: -1;
 	position: absolute;
 	top: 0;
-	height: 150px;
+	height: 100px;
 	width: 100%;
-	background: linear-gradient(to bottom, rgba(17, 24, 18, 0.8) 10%, rgba(17, 24, 18, 0));
+	background: linear-gradient(
+		to bottom,
+		rgba(17, 24, 18, 0.8) 10%,
+		rgba(17, 24, 18, 0)
+	);
 }
 
 .navbar .shadow::before {
@@ -59,7 +63,11 @@ body {
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background: linear-gradient(to bottom, rgba(17, 24, 18, 0.5) 60%, rgba(17, 24, 18, 0));
+	background: linear-gradient(
+		to bottom,
+		rgba(17, 24, 18, 0.5) 60%,
+		rgba(17, 24, 18, 0)
+	);
 	transition: opacity 1s;
 }
 
@@ -86,13 +94,13 @@ body {
 }
 
 .navbar .logo img {
-	height: 60px;
-	width: 60px;
+	height: 40px;
+	width: 40px;
 	align-self: center;
 }
 
 .navbar .logo .text {
-	margin-left: 20px;
+	margin-left: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -100,11 +108,12 @@ body {
 
 .navbar .logo .text span {
 	color: beige;
-	font-size: 1rem;
+	font-size: 0.7rem;
 	text-transform: uppercase;
 }
 
-.navbar .menu ul, .navbar .portal ul {
+.navbar .menu ul,
+.navbar .portal ul {
 	list-style-type: none;
 }
 
@@ -113,7 +122,7 @@ body {
 	cursor: pointer;
 	padding: 5px 5px;
 	margin: 0 10px;
-	font-size: 1rem;
+	font-size: 0.8rem;
 }
 
 .navbar .menu ul li#active {
@@ -121,7 +130,7 @@ body {
 	padding: 5px 5px;
 	margin: 0 10px;
 	font-family: "Poppins-Black";
-	font-size: 1.2rem;
+	font-size: 1rem;
 	color: olivedrab;
 }
 
@@ -130,14 +139,14 @@ body {
 	cursor: pointer;
 	padding: 5px 5px;
 	margin: 0;
-	font-size: 1rem;
+	font-size: 0.8rem;
 }
 
 .navbar .portal ul li:nth-child(2) {
 	display: inline;
 	padding: 5px 5px;
 	margin: 0;
-	font-size: 1rem;
+	font-size: 0.8rem;
 	color: beige;
 }
 
@@ -145,37 +154,39 @@ body {
 	display: inline;
 	padding: 5px 5px;
 	font-family: "Poppins-Black";
-	font-size: 1.2rem;
+	font-size: 1rem;
 	color: olivedrab;
 }
 
-.navbar .menu ul li a, .navbar .portal ul li a {
+.navbar .menu ul li a,
+.navbar .portal ul li a {
 	text-decoration: none;
 	color: beige;
 	transition: all 0.3s;
 }
 
-.navbar .menu ul li:not(#active):hover a, .navbar .portal ul li:not(#active):hover a {
+.navbar .menu ul li:not(#active):hover a,
+.navbar .portal ul li:not(#active):hover a {
 	color: mediumseagreen;
 }
 
 /* Go Up Button */
 
 .go-back .ball {
-	height: 40px;
-	width: 40px;
+	height: 35px;
+	width: 35px;
 	background: olivedrab;
 	border-radius: 50%;
 	position: sticky;
-	top: 85vh;
-	right: 97px;
+	top: 87vh;
+	right: 80px;
 	transition: all 0.3s;
 }
 
 .go-back .ball:hover {
-	height: 45px;
-	width: 45px;
-	right: 94px;
+	height: 40px;
+	width: 40px;
+	right: 77px;
 	background: mediumseagreen;
 }
 

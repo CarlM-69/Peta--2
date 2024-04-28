@@ -1,5 +1,5 @@
 body {
-	background: url("../Resources/Stock-Images/background.png") no-repeat center bottom;
+	background: black url("../Resources/Stock-Images/background.png") no-repeat center bottom;
 	background-size: cover;
 	background-attachment: fixed;
 	overflow-x: hidden;
@@ -20,6 +20,8 @@ body {
 }
 
 .section:nth-child(3) {
+	background: url("../Resources/Stock-Images/background-2.jpeg") no-repeat center bottom;
+	background-size: cover;
 	height: 100vh;
 	width: 100%;
 }
@@ -44,13 +46,17 @@ body {
     left: 15vh;
     height: 100%;
     width: 125%;
-    background: linear-gradient(to top, black 10%, transparent);
+    background: linear-gradient(
+		to top,
+		black 10%,
+		transparent
+	);
     transform: rotate(330deg);
 }
 
 .section:nth-child(1) .content {
 	position: absolute;
-	bottom: 10rem;
+	bottom: 7rem;
 	display: flex;
 	flex-direction: column;
 	height: 10rem;
@@ -59,11 +65,11 @@ body {
 }
 
 .section:nth-child(1) .content .head {
-	padding-right: 2.8em;
+	padding-right: 2em;
 	color: beige;
 	letter-spacing: 0.2rem;
 	font-weight: bolder;
-	font-size: 2.5rem;
+	font-size: 1.7rem;
 	font-family: "Poppins-Black";
 	text-transform: uppercase;
 	text-align: right;
@@ -71,8 +77,8 @@ body {
 }
 
 .section:nth-child(1) .content .head:first-child {
-	font-size: 4rem;
-	padding-right: 1.75em;
+	font-size: 3rem;
+	padding-right: 1.13333em;
 	margin-bottom: -0.3em;
 }
 
@@ -92,16 +98,16 @@ body {
 }
 
 .section:nth-child(1) .content .body {
-	padding-right: 7rem;
+	padding-right: 3.4rem;
 	display: flex;
 	justify-content: right;
 }
 
 .section:nth-child(1) .content .body span {
 	color: blanchedalmond;
-	width: 40rem;
+	width: 35rem;
 	text-align: right;
-	font-size: 0.7rem;
+	font-size: 0.6rem;
 }
 
 .section:nth-child(2) .slides {
@@ -173,13 +179,13 @@ body {
 .section:nth-child(2) .slides .slide .img-container1 .content,
 .section:nth-child(2) .slides .slide .img-container3 .content {
 	width: 50%;
-	margin-right: 10rem;
+	margin-right: 3.4rem;
 }
 
 .section:nth-child(2) .slides .slide .img-container2 .content,
 .section:nth-child(2) .slides .slide .img-container4 .content {
 	width: 50%;
-	margin-left: 10em;
+	margin-left: 3.4em;
 }
 
 .section:nth-child(2) .slides .slide .img-container5 .content {
@@ -189,7 +195,7 @@ body {
 .section:nth-child(2) .slides .slide .header {
 	display: block;
 	font-family: "Poppins-Black";
-	font-size: 3rem;
+	font-size: 2rem;
 	color: bisque;
 	text-shadow: 0 0 25px rgb(0, 0, 0);
 }
@@ -211,7 +217,7 @@ body {
 .section:nth-child(2) .slides .slide .body {
 	display: block;
 	font-family: "Poppins-Light";
-	font-size: 1rem;
+	font-size: 0.9rem;
 	color: blanchedalmond;
 	text-shadow: 0 0 25px rgb(0, 0, 0);
 }
@@ -295,4 +301,64 @@ body {
 
 .section:nth-child(2) .slides_navbar .slides_bar:hover {
 	background: green;
+}
+
+.section:nth-child(3) .content {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(3) .content .mission {
+	z-index: 1;
+	flex: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(3) .content .vision {
+	z-index: 1;
+	flex: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(3) .content .mission span:first-child,
+.section:nth-child(3) .content .vision span:first-child {
+	color: beige;
+	font-family: "Poppins-Black";
+	font-size: 1.5rem;
+	letter-spacing: 3px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.section:nth-child(3) .content .mission span:last-child,
+.section:nth-child(3) .content .vision span:last-child {
+	color: blanchedalmond;
+	font-family: "Poppins-Thin";
+	width: 60%;
+	text-align: center;
+}
+
+.section:nth-child(3) .content .shadow {
+	z-index: 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(
+		to bottom,
+		transparent 0%,
+		rgba(0, 0, 0, 0.7) 35%,
+		rgba(0, 0, 0, 0.7) 50%,
+		rgba(0, 0, 0, 0.7) 65%,
+		transparent 100%
+	);
 }
