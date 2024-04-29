@@ -1,0 +1,23 @@
+@keyframes s_3-border-show {
+	0% {
+		border: 3px solid rgba(176, 176, 163, 0);
+		height: 100%;
+		width: 100%;
+	}
+	100% {
+		border: 3px solid rgba(176, 176, 163, 1);
+		height: 70%;
+		width: 75%;
+	}
+}
+
+@keyframes s_3-first-title-show {
+	0% {
+		opacity: 0;
+		left: -450px;
+	}
+	100% {
+		opacity: 1;
+		left: 200px;
+	}
+}
