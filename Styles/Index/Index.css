@@ -325,6 +325,7 @@ body {
 .section:nth-child(3) .title:first-child {
 	align-self: baseline;
 	position: absolute;
+	left: 0;
 }
 
 /* .section:nth-child(3) .content .title {
