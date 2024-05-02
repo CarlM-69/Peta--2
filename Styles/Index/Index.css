@@ -315,7 +315,6 @@ body {
 .section:nth-child(3) .title:nth-child(1) {
 	position: absolute;
 	top: 225vh;
-	left: 5vh;
 	font-size: 5rem;
 	font-family: 'Times New Roman', Times, serif;
 	animation: s_3-first-title-show both;
@@ -325,40 +324,111 @@ body {
 
 .section:nth-child(3) .title:nth-child(2) {
 	position: absolute;
-	top: 237vh;
 	left: 5vh;
 	font-size: 1.5rem;
 	font-family: serif;
 	font-weight: lighter;
 	animation: s_3-second-title-show linear both;
 	animation-timeline: view();
-	animation-range: 25% 40%;
+	animation-range: 25% 35%;
+}
+
+.section:nth-child(3) .content {
+	margin-top: 50px;
+	height: 30rem;
+	width: 50rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: s_3-content-show linear both;
+	animation-timeline: view();
+	animation-range: 35% 50%;
 }
 
 .section:nth-child(3) .content .card {
 	position: absolute;
+	background: rgb(220, 220, 204);
 	height: 12rem;
-	flex: 33rem;
-	box-shadow: 0px 20px 5px black;
-	transition: all 0.5s;
+	width: 30rem;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.2);
+	transition: transform 0.5s, box-shadow 0.5s;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(3) .content .card .section_:nth-child(1) {
+	height: 100%;
+	flex: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(3) .content .card .section_:nth-child(2) {
+	height: 100%;
+	flex: 70%;
+}
+
+.section:nth-child(3) .content .card .section_:nth-child(1) img {
+	border-radius: 50%;
+	width: 70%;
+}
+
+.section:nth-child(3) .content .card .section_:nth-child(2) .name {
+	margin: 10px 0;
+}
+
+.section:nth-child(3) .content .card .section_:nth-child(2) .name span {
+	font-size: 1.5rem;
+	color: rgb(28, 28, 28);
+}
+
+.section:nth-child(3) .content .card .section_:nth-child(2) .stars img {
+	filter: brightness(0) saturate(100%) invert(83%) sepia(67%) saturate(804%) hue-rotate(324deg) brightness(104%) contrast(106%) drop-shadow(1px 1px 3px black);
+	width: 7%;
+}
+
+.section:nth-child(3) .content .card .section_:nth-child(2) .desc {
+	width: 95%;
+}
+
+.section:nth-child(3) .content .card .section_:nth-child(2) .desc span {
+	font-size: 0.9rem;
+	font-family: "Poppins-Light";
+	color: rgb(28, 28, 28);
+}
+
+.section:nth-child(3) .content:hover .card:nth-child(1) {
+	box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.5);
+	transform: translateX(-50vh) rotate(-5deg);
+}
+
+.section:nth-child(3) .content:hover .card:nth-child(2) {
+	box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.5);
+}
+
+.section:nth-child(3) .content:hover .card:nth-child(3) {
+	box-shadow: 5px 5px 10px 5px rgba(0,0,0,0.5);
+	transform: translateX(50vh) rotate(5deg);
 }
 
 .section:nth-child(3) .content .card:nth-child(1) {
-	background: orange;
 	z-index: 1;
 }
 
 .section:nth-child(3) .content .card:nth-child(2) {
-	background: violet;
 	z-index: 3;
 }
 
 .section:nth-child(3) .content .card:nth-child(3) {
-	background: blue;
 	z-index: 2;
 }
 
 .section:nth-child(3) .content .card:nth-child(1):hover {
+	transform: translateX(-50vh) rotate(0deg);
 	z-index: 999;
 }
 
@@ -367,6 +437,7 @@ body {
 }
 
 .section:nth-child(3) .content .card:nth-child(3):hover {
+	transform: translateX(50vh) rotate(0deg);
 	z-index: 999;
 }
 
