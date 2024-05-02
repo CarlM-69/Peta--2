@@ -35,12 +35,18 @@ body {
 	background-size: cover;
 }
 
+.section:nth-child(5) {
+	height: 57.5vh;
+	width: 100%;
+	background: black;
+}
+
 /* Magic */
 
 .go-back {
 	z-index: 999;
 	position: absolute;
-	bottom: -300vh;
+	bottom: -315vh;
 	right: 0;
 	height: 300%;
 	width: 10%;
