@@ -194,3 +194,224 @@ body {
 	height: 100%;
 	width: 100%;
 }
+
+.section:last-child .content:nth-child(1) {
+	flex: 67%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:last-child .content:nth-child(2) {
+	flex: 6%;
+	width: 100%;
+}
+
+.section:last-child .content:nth-child(3) {
+	flex: 27%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(1) {
+	flex: 20%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(2) {
+	flex: 40%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(3) {
+	flex: 20%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(4) {
+	flex: 20%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:last-child .content:nth-child(1) .part .container:first-child {
+	flex: 40%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:last-child .content:nth-child(1) .part .container:last-child {
+	flex: 60%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.section:last-child .content:nth-child(1) .part .container:first-child span {
+	font-family: "Poppins-Bold";
+	color: beige;
+	text-transform: uppercase;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(1) img {
+	width: 40%;
+	margin-bottom: 20px;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(1) span {
+	color: beige;
+	width: 10rem;
+	text-align: center;
+	line-height: 17px;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(2) .container:last-child span {
+	width: 80%;
+	text-align: center;
+	font-family: "Poppins-Light";
+	font-size: 0.85rem;
+	color: blanchedalmond;
+	margin-bottom: 15px;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(2) .container:last-child .__ {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(2) .container:last-child .__ input[name="email"] {
+	width: 45vh;
+	outline: none;
+	padding: 3px 5px;
+	padding-left: 15px;
+	border-radius: 5px 0 0 5px;
+	border: 0;
+	color: rgb(28, 28, 28);
+	background: rgb(238, 238, 238);
+	transition: all 1s, background 0.3s;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(2) .container:last-child .__ input[name="email"]:focus {
+	border-radius: 13px 0 0 13px;
+	background: rgb(181, 211, 186);
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(2) .container:last-child .__ input[type="submit"] {
+	cursor: pointer;
+	background: rgb(224, 224, 224);
+	padding: 3px 10px;
+	border: 0;
+	border-radius: 0 5px 5px 0;
+	transition: border-radius 1s, background 0.3s;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(2) .container:last-child .__ input[type="submit"]:hover {
+	background: rgb(186, 186, 186);
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(2) .container:last-child .__ input[type="submit"]:active {
+	background: rgb(64, 64, 64);
+	color: bisque;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(2) .container:last-child .__ input[name="email"]:focus ~ input[type="submit"] {
+	border-radius: 0 13px 13px 0;
+	background: rgb(153, 178, 157);
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(2) .container:last-child .__ input[name="email"]:focus ~ input[type="submit"]:hover {
+	background: rgb(125, 146, 129);
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(3) .container:last-child ul,
+.section:last-child .content:nth-child(1) .part:nth-child(4) .container:last-child ul {
+	margin-top: 0;
+	list-style-type: none;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(3) .container:last-child ul li,
+.section:last-child .content:nth-child(1) .part:nth-child(4) .container:last-child ul li {
+	margin-top: 0;
+	margin-bottom: -5px;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(3) .container:last-child ul li a,
+.section:last-child .content:nth-child(1) .part:nth-child(4) .container:last-child ul li a {
+	font-family: "Poppins-Light";
+	font-size: 0.85rem;
+	color: blanchedalmond;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.section:last-child .content:nth-child(1) .part:nth-child(3) .container:last-child ul li a:hover,
+.section:last-child .content:nth-child(1) .part:nth-child(4) .container:last-child ul li a:hover {
+	color: rgb(203, 171, 131);
+}
+
+.section:last-child .content:nth-child(2) hr {
+	width: 0px;
+	animation: footer_hr-show both;
+	animation-timeline: view();
+	animation-range: 0% 25%;
+}
+
+@keyframes footer_hr-show {
+	0% {
+		opacity: 0;
+		width: 0%;
+	}
+	100% {
+		opacity: 1;
+		width: 50%;
+	}
+}
+
+.section:last-child .content:nth-child(3) .socials {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:last-child .content:nth-child(3) .socials a {
+	margin: 0 5px;
+	margin-top: 30px;
+}
+
+.section:last-child .content:nth-child(3) .socials a img {
+	width: 25px;
+	filter: brightness(0) saturate(100%) invert(93%) sepia(13%) saturate(475%) hue-rotate(356deg) brightness(112%) contrast(92%);
+}
+
+.section:last-child .content:nth-child(3) span {
+	font-size: 0.9rem;
+	font-family: "Poppins-Thin";
+	color: beige;
+}
