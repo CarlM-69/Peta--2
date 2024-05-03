@@ -1,5 +1,6 @@
 body {
 	background: beige;
+	overflow-x: hidden;
 }
 
 /* Sections */
@@ -8,6 +9,16 @@ body {
 	height: 100vh;
 	width: 100%;
 	z-index: -1000;
+}
+
+.section:nth-child(2) {
+	height: 100vh;
+	width: 100%;
+	background: beige;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
 /* Magic */
@@ -20,4 +31,57 @@ body {
 	position: absolute;
 	top: 0;
 	z-index: -999;
+}
+
+.section:nth-child(1) .__ {
+	position: absolute;
+	top: 75vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .__ span:first-child {
+	font-family: "Poppins-Black";
+	font-size: 4rem;
+	text-transform: uppercase;
+	color: rgb(34, 34, 34);
+	animation: s_1-title-disappear;
+	animation-timeline: view();
+	animation-range: 50% 100%;
+}
+
+.section:nth-child(1) .__ span:last-child {
+	animation: s_1-scroll-down-disappear;
+	animation-timeline: view();
+	animation-range: 50% 100%;
+}
+
+.section:nth-child(1) .__ span:last-child a {
+	font-family: "Poppins-Light";
+	font-size: 0.9rem;
+	text-decoration: none;
+	color: black;
+}
+
+.section:nth-child(2) .content:first-child {
+	background: rgb(237, 237, 237);
+	height: 70%;
+	width: 25%;
+	box-shadow: 15px 10px 30px 5px black;
+	animation: s_2-left-show;
+	animation-timeline: view();
+	animation-range: 0% 35%;
+}
+
+.section:nth-child(2) .content:last-child {
+	background: rgb(89, 142, 89);
+	height: 70%;
+	width: 25%;
+	box-shadow: 15px 10px 30px 5px black;
+	animation: s_2-right-show;
+	animation-timeline: view();
+	animation-range: 0% 35%;
 }
