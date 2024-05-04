@@ -307,6 +307,7 @@ body {
 	font-size: 0.85rem;
 	color: blanchedalmond;
 	margin-bottom: 15px;
+	margin-top: 40px;
 }
 
 .section:last-child .content:nth-child(1) .part:nth-child(2) .container:last-child .__ {
@@ -389,19 +390,20 @@ body {
 
 .section:last-child .content:nth-child(2) hr {
 	width: 0px;
+	opacity: 0;
 	animation: footer_hr-show both;
 	animation-timeline: view();
-	animation-range: 0% 25%;
+	animation-range: 10% 25%;
 }
 
 @keyframes footer_hr-show {
-	0% {
+	10% {
 		opacity: 0;
 		width: 0%;
 	}
 	100% {
 		opacity: 1;
-		width: 50%;
+		width: 60%;
 	}
 }
 
@@ -418,12 +420,12 @@ body {
 }
 
 .section:last-child .content:nth-child(3) .socials a img {
-	width: 20px;
+	width: 25px;
 	filter: brightness(0) saturate(100%) invert(93%) sepia(13%) saturate(475%) hue-rotate(356deg) brightness(112%) contrast(92%);
 }
 
 .section:last-child .content:nth-child(3) .socials a img:hover {
-	filter: brightness(0) saturate(100%) invert(99%) sepia(91%) saturate(781%) hue-rotate(303deg) brightness(102%) contrast(103%);
+	color: bisque;
 }
 
 .section:last-child .content:nth-child(3) span {
