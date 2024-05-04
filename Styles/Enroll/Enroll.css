@@ -14,9 +14,9 @@ body {
 .section:nth-child(2) {
 	height: 100vh;
 	width: 100%;
-	background: beige;
+	background: linear-gradient(to bottom, beige 20%, rgb(206, 206, 165));
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
@@ -64,6 +64,19 @@ body {
 	font-size: 0.9rem;
 	text-decoration: none;
 	color: black;
+}
+
+.section:nth-child(2) .__ {
+	font-family: "Poppins-Bold";
+	font-size: 2rem;
+}
+
+.section:nth-child(2) .form {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .section:nth-child(2) .content:first-child {
