@@ -8,9 +8,36 @@ body {
 /* Sections */
 
 .section:nth-child(1) {
-	height: 100vh;
+	height: 500vh;
 	width: 100%;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(
+		to left,
+		transparent 0%,
+		rgba(0, 0, 0, 0.7) 20%,
+		rgba(0, 0, 0, 0.7) 50%,
+		rgba(0, 0, 0, 0.7) 80%,
+		transparent 100%
+	);
 }
 
 /* Magic */
+
+.section:nth-child(1) .container {
+	margin-top: 100vh;
+	justify-self: center;
+	align-self: center;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 50px 50px;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .container img {
+	width: 400px;
+}

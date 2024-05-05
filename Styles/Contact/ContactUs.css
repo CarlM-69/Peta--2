@@ -18,17 +18,179 @@ body {
 .section:nth-child(1) .container {
 	height: 100vh;
 	width: 100vw;
-	position: absolute;
+	position: relative;
 	top: 0;
+	display: flex;
+	justify-content: center;
+}
+
+.section:nth-child(1) .container .card {
+	margin-top: 60px;
+	height: 70%;
+	width: 60%;
+	background: rgba(19, 20, 24);
+	border-radius: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(1) {
+	height: 100%;
+	flex: 30%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.section:nth-child(1) .container .card {
-	margin-top: 100px;
-	height: 60%;
-	width: 60%;
-	background: rgba(19, 20, 24);
+.section:nth-child(1) .container .card .inner:nth-child(2) {
+	height: 70%;
+	flex: 0.5%;
+	border-left: 1px solid beige;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) {
+	height: 100%;
+	flex: 69%;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(1) table {
+	height: 85%;
+	width: 100%;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(1) table tr {
+	width: 100%;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(1) table tr td {
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(1) table tr td img {
+	filter: brightness(0) saturate(100%) invert(91%) sepia(35%) saturate(143%) hue-rotate(3deg) brightness(104%) contrast(92%);
+	width: 20px;
+	display: block;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(1) table tr td span {
+	width: 80%;
+	color: blanchedalmond;
+	display: block;
+	text-align: center;
+	font-family: "Poppins-Extra-Light";
+	font-size: 1rem;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(1) table tr td span:last-child {
+	font-size: 0.8rem;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) {
+	padding: 0 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) .divider:first-child {
+	flex: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) .divider:last-child {
+	flex: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) span:nth-child(1) {
+	align-self: center;
+	font-family: "Poppins-Black";
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: beige;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) span:nth-child(2) {
+	font-family: "Poppins-Light";
+	font-size: 0.8rem;
+	color: blanchedalmond;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) form label {
+	color: beige;
+	font-family: "Poppins-Light";
+	font-size: 0.9rem;
+	margin-bottom: 10px;
+	transition: all 0.3s;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) form label input,
+.section:nth-child(1) .container .card .inner:nth-child(3) form label textarea {
+	width: 100%;
+	display: block;
+	outline: 0;
+	border: 0;
+	border-bottom: 1px solid blanchedalmond;
+	background: transparent;
+	color: beige;
+	transition: all 0.3s;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) form label textarea {
+	height: 80px;
+	resize: none;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) form label input::placeholder,
+.section:nth-child(1) .container .card .inner:nth-child(3) form label textarea::placeholder {
+	color: rgb(202, 186, 161);
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) form label input:focus,
+.section:nth-child(1) .container .card .inner:nth-child(3) form label textarea:focus {
+	border-bottom: 1px solid beige;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) form label:has(> input:focus),
+.section:nth-child(1) .container .card .inner:nth-child(3) form label:has(> textarea:focus) {
+	color: white;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) form input[type="submit"] {
+	cursor: pointer;
+	align-self: center;
+	width: 30%;
+	border: 0;
 	border-radius: 15px;
+	font-family: "Poppins-Bold";
+	font-size: 1.2rem;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) form input[type="submit"]:hover {
+	background: bisque;
+}
+
+.section:nth-child(1) .container .card .inner:nth-child(3) form input[type="submit"]:active {
+	background: rgb(98, 89, 79);
+	color: beige;
 }
