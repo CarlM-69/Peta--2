@@ -49,18 +49,27 @@ body {
 }
 
 .section:nth-child(1) .shadow-content {
-	z-index: -1;
+	z-index: -999;
 	position: absolute;
-	top: 40vh;
-	left: 15vh;
-	height: 100%;
-	width: 125%;
+	top: 0;
+	height: 110vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.section:nth-child(1) .shadow-content .shadow {
+	position: absolute;
+	top: 0;
+	right: -30vw;
+	height: 150vh;
+	width: 100vw;
 	background: linear-gradient(
-		to top,
-		black 10%,
+		to bottom,
+		black 0%,
+		rgba(0, 0, 0, 0.5) 70%,
 		transparent
 	);
-	transform: rotate(330deg);
+	transform: rotate(130deg);
 }
 
 .section:nth-child(1) .content {

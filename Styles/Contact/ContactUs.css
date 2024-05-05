@@ -14,3 +14,21 @@ body {
 }
 
 /* Magic */
+
+.section:nth-child(1) .container {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .container .card {
+	margin-top: 100px;
+	height: 60%;
+	width: 60%;
+	background: rgba(19, 20, 24);
+	border-radius: 15px;
+}
