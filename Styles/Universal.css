@@ -425,7 +425,7 @@ body {
 }
 
 .section:last-child .content:nth-child(3) .socials a img:hover {
-	color: bisque;
+	filter: brightness(0) saturate(100%) invert(90%) sepia(15%) saturate(866%) hue-rotate(319deg) brightness(104%) contrast(102%);
 }
 
 .section:last-child .content:nth-child(3) span {

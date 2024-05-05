@@ -50,17 +50,17 @@ body {
 
 .section:nth-child(1) .shadow-content {
 	z-index: -1;
-    position: absolute;
-    top: 40vh;
-    left: 15vh;
-    height: 100%;
-    width: 125%;
-    background: linear-gradient(
+	position: absolute;
+	top: 40vh;
+	left: 15vh;
+	height: 100%;
+	width: 125%;
+	background: linear-gradient(
 		to top,
 		black 10%,
 		transparent
 	);
-    transform: rotate(330deg);
+	transform: rotate(330deg);
 }
 
 .section:nth-child(1) .content {
