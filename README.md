@@ -1,10 +1,26 @@
 # Performance Task
-- [x]  ![#ffc0cb](https://via.placeholder.com/10/ffc0cb?text=+)
+- [x]  Must have 10 or more webpages
+- [x]  Must have picture(s)
+- [x]  Must have video(s)
+- [x]  Must have table(s)
+- [x]  Must have form(s)
 
 ## Features
-- Still in development
+- Interactive Features
+- Scroll Animations
+- Custom Scrollbar
+- Beautiful Footer
+- Slideshow Galleries
+- "Go back to top" Button
+- Background Video
+- Working Forms
 
-## Author
+## Preview
+
+![image](https://github.com/CarlM-69/Peta--2/assets/73862565/15428fcd-6555-45e8-8f1e-b51d26387830)
+
+
+## Developer:
 
 - Facebook: [@carlmathewgabay](https://www.facebook.com/carlmathewgabay)
 
