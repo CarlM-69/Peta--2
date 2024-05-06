@@ -36,6 +36,9 @@ body {
 	gap: 50px 50px;
 	justify-content: center;
 	align-items: center;
+	animation: s_1-pics-show both;
+	animation-timeline: view();
+	animation-range: 0% 50%;
 }
 
 .section:nth-child(1) .container img {
