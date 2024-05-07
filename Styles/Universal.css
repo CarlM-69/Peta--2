@@ -309,6 +309,9 @@ body {
 .navbar .portal ul li#active {
 	display: inline;
 	padding: 5px 5px;
+}
+
+.navbar .portal ul li#active span {
 	font-family: "Poppins-Black";
 	font-size: 1rem;
 	color: rgb(161, 220, 41);

@@ -30,7 +30,6 @@ window.addEventListener("DOMContentLoaded", function() {
 		const db = event.target.result;
 		const transaction = db.transaction("Users", "readonly");
 		const objectStore = transaction.objectStore("Users");
-
 		const cursor = objectStore.getAll();
 
 		cursor.onsuccess = function(e_event) {
@@ -64,6 +63,39 @@ window.addEventListener("DOMContentLoaded", function() {
 		logout_alert.classList.add("alert-intro-entrance");
 		logout_alert_card.classList.add("alert-intro-alert-entrance");
 		logout_alert.style.zIndex = 999;
+	});
+
+	logout_alert_btn.addEventListener("click", function() {
+		logout_alert.classList.remove("alert-intro-entrance");
+		logout_alert_card.classList.remove("alert-intro-alert-entrance");
+		logout_alert.classList.add("alert-intro-exit");
+		logout_alert_card.classList.add("alert-intro-alert-exit");
+		setTimeout(function() {
+			logout_alert.style.zIndex = -999;
+		}, 500);
+
+		var request = indexedDB.open("Users", 2);
+
+		request.onsuccess = function(event) {
+			const db = event.target.result;
+			const transaction = db.transaction("Users", "readwrite");
+			const objectStore = transaction.objectStore("Users");
+			const cursor = objectStore.openCursor();
+
+			cursor.onsuccess = function(e_event) {
+				if(cursor) {
+					var user = cursor.value;
+
+					if(user.is_Logged == 1) {
+						user.is_Logged = 0;
+
+						cursor.update(user);
+					}
+
+					cursor.continue();
+				}
+			}
+		}
 	});
 
 	back_alert_btn.addEventListener("click", function() {

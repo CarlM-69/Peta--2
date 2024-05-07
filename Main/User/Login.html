@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="../../Scripts/Libs/crypto-js.min.js"></script>
+
 		<link rel="icon" href="../../Resources/Icons/sfhs_logo.png" type="image/x-icon">
 		<link rel="stylesheet" href="../../Styles/Fonts.css">
 		<link rel="stylesheet" href="../../Styles/Universal.css">
-		<link rel="stylesheet" href="../../Styles/Contact/ContactUs.css">
+		<link rel="stylesheet" href="../../Styles/Enroll/Success.css">
 
-		<title>SFHS | Contact Us</title>
+		<title>SFHS | Login</title>
 	</head>
 	<body>
 		<div class="section" id="s_1">
@@ -25,12 +27,12 @@
 						<li><a href="../Enroll/Enroll.html">Enroll</a></li>
 						<li><a href="../Library/Library.html">Library</a></li>
 						<li><a href="../About/AboutUs.html">About Us</a></li>
-						<li id="active">Contact Us</li>
+						<li><a href="../Contact/ContactUs.html">Contact Us</a></li>
 					</ul>
 				</div>
 				<div class="portal">
 					<ul>
-						<li id="login"><a href="../User/Login.html">Log In</a></li>
+						<li id="active"><span id="login">Log In</span></li>
 						<li class="hide" id="greeter">Hello, Guest!</li>
 						<li>|</li>
 						<li id="register"><a href="../User/Register.html">Register</a></li>
@@ -53,59 +55,12 @@
 			</div>
 
 			<div class="container">
-				<div class="card">
-					<div class="inner">
-						<table>
-							<tr>
-								<td>
-									<img src="../../Resources/Icons/location.svg">
-									<span>Address</span>
-									<span>1 Misamis St, Bago Bantay, Quezon City, Metro Manila</span>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<img src="../../Resources/Icons/phonecall.svg">
-									<span>Contact</span>
-									<span>(+63)999 099 0909</span>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<img src="../../Resources/Icons/envelope-solid.svg">
-									<span>Email</span>
-									<span>sanfranciscohs@gmail.com</span>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<img src="../../Resources/Icons/messenger.svg">
-									<span>Messenger</span>
-									<span>San Francisco High School</span>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<div class="inner"></div>
-					<div class="inner">
-						<div class="divider">
-							<span>Send us a Message!</span>
-							<span>If you have any concerns, we're here to assist you with class schedules, tech support, or any other school-related matters. Don't hesitate to reach out—we value your concerns and are eager to hear from you!</span>
-						</div>
-						<div class="divider">
-							<form name="form">
-								<label>My Name<input type="text" name="form" placeholder="Enter your name" autocomplete="name" required></label>
-								<label>My Email<input type="text" name="form" placeholder="Enter your email" autocomplete="email" required></label>
-								<label>My Concern<textarea name="form" placeholder="Enter your concern" required></textarea></label>
-								<input type="submit" value="SUBMIT">
-							</form>
-						</div>
-					</div>
-				</div>
+
 			</div>
 		</div>
 
 		<script src="../../Scripts/Universal.js"></script>
+		<script src="../../Scripts/User/Login.js"></script>
 		
 		<div class="section last">
 			<div class="content">
@@ -132,11 +87,11 @@
 					<div class="container">
 						<ul>
 							<li><a href="../Home/index.html">Home</a></li>
-							<li><a href="../Enroll/Enroll.html">Enroll</a></li>
+							<li><a href="#">Enroll</a></li>
 							<li><a href="../Library/Library.html">Library</a></li>
 							<li><a href="../About/AboutUs.html">About Us</a></li>
-							<li><a href="#">Contact Us</a></li>
-							<li><a href="../User/Login.html">Login</a></li>
+							<li><a href="../Contact/ContactUs.html">Contact Us</a></li>
+							<li><a href="#">Login</a></li>
 							<li><a href="../User/Register.html">Register</a></li>
 						</ul>
 					</div>
