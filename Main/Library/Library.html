@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="../../Scripts/Libs/crypto-js.min.js"></script>
+
 		<link rel="icon" href="../../Resources/Icons/sfhs_logo.png" type="image/x-icon">
 		<link rel="stylesheet" href="../../Styles/Fonts.css">
 		<link rel="stylesheet" href="../../Styles/Universal.css">
@@ -19,9 +21,6 @@
 						<span>San Francisco</span>
 						<span>High School</span>
 					</div>
-					<div class="text">
-						<span id="username_change">Hello, Guest!</span>
-					</div>
 				</div>
 				<div class="menu">
 					<ul>
@@ -34,10 +33,25 @@
 				</div>
 				<div class="portal">
 					<ul>
-						<li><a href="../User/Login/Login.html">Log In</a></li>
+						<li id="login"><a href="../User/Login.html">Log In</a></li>
+						<li class="hide" id="greeter">Hello, Guest!</li>
 						<li>|</li>
-						<li><a href="../User/Register/Register.html">Register</a></li>
+						<li id="register"><a href="../User/Register.html">Register</a></li>
+						<li class="hide" id="logout">Log Out</li>
 					</ul>
+				</div>
+			</div>
+
+			<div class="logout-alert" id="logout-alert">
+				<div class="alert" id="logout-card">
+					<div class="alert-part">
+						<span class="alert-title">Logging Out?</span>
+						<img class="alert-image" src="../../Resources/Icons/person-to-door.svg">
+					</div>
+					<div class="alert-part">
+						<button class="alert-buttons" id="logout-alert-btn">LOG OUT</button>
+						<button class="alert-buttons" id="back-alert-btn">BACK</button>
+					</div>
 				</div>
 			</div>
 
@@ -60,6 +74,9 @@
 				<label><input type="checkbox" name="zoom"><img src="../../Resources/Stock-Images/pic_15.jpg"></label>
 			</div>
 		</div>
+
+		<script src="../../Scripts/Universal.js"></script>
+
 		<div class="section last">
 			<div class="content">
 				<div class="part"> <!-- logo -->

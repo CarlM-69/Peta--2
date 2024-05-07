@@ -2,7 +2,6 @@
 <html>
 	<head>
 		<script src="../../Scripts/Libs/crypto-js.min.js"></script>
-		<script src="../../Scripts/Universal.js"></script>
 
 		<link rel="icon" href="../../Resources/Icons/sfhs_logo.png" type="image/x-icon">
 		<link rel="stylesheet" href="../../Styles/Fonts.css">
@@ -22,9 +21,6 @@
 						<span>San Francisco</span>
 						<span>High School</span>
 					</div>
-					<div class="text">
-						<span id="username_change">Hello, Guest!</span>
-					</div>
 				</div>
 				<div class="menu">
 					<ul>
@@ -37,14 +33,29 @@
 				</div>
 				<div class="portal">
 					<ul>
-						<li><a href="../User/Login/Login.html">Log In</a></li>
+						<li id="login"><a href="../User/Login.html">Log In</a></li>
+						<li class="hide" id="greeter">Hello, Guest!</li>
 						<li>|</li>
-						<li><a href="../User/Register/Register.html">Register</a></li>
+						<li id="register"><a href="../User/Register.html">Register</a></li>
+						<li class="hide" id="logout">Log Out</li>
 					</ul>
 				</div>
 			</div>
 
-			<span class="title">IT'S HISTORY</span>
+			<div class="logout-alert" id="logout-alert">
+				<div class="alert" id="logout-card">
+					<div class="alert-part">
+						<span class="alert-title">Logging Out?</span>
+						<img class="alert-image" src="../../Resources/Icons/person-to-door.svg">
+					</div>
+					<div class="alert-part">
+						<button class="alert-buttons" id="logout-alert-btn">LOG OUT</button>
+						<button class="alert-buttons" id="back-alert-btn">BACK</button>
+					</div>
+				</div>
+			</div>
+
+			<span class="title">ITS HISTORY</span>
 			<div class="content">
 				<span>On June 9, 1954 San Francisco High School was born in the midst of a small but busy community. It was first an annex of the Quezon City High School with 90 first year students and 6 members of the faculty to start with. Classes were housed in the rundown Pizano building along Morato St</span>
 				<span>At the start, San Francisco High School's future did not seem bright but inspired by the courage and determination of the administrators and the Parent-Teacher association presidents; they saw the fledging San Francisco High School grow to what it is today.</span>
@@ -53,6 +64,9 @@
 				<span>In November of the same year, the Q.C. Council approved resolution No. 10590 s 75, changing the name of the school, San Francisco High School to Don Mariano Marcos High School and was confirmed by a Division Memorandum No. 32 dated October 23, 1975. However, the original name of the school was adopted in October 1986 and up to the present it remains to be San Francisco High School.</span>
 			</div>
 		</div>
+		
+		<script src="../../Scripts/Universal.js"></script>
+		
 		<div class="section last">
 			<div class="content">
 				<div class="part"> <!-- logo -->
