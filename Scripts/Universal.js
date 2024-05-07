@@ -37,7 +37,7 @@ window.addEventListener("DOMContentLoaded", function() {
 			const users = e_event.target.result;
 
 			for(const user in users) {
-				if(users[user].is_Logged == 0) {
+				if(users[user].is_Logged == 1) {
 					var greetings = [
 						"Hi", "Hello", "Good Day",
 						"Good to see you", "Greetings",
