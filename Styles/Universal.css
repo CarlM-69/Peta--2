@@ -173,12 +173,14 @@ body {
 /* Navigation Bar */
 
 .navbar {
-	margin-top: 0.5rem;
-	height: 70px;
+	position: relative;
+	top: 0;
+	height: 90px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	z-index: 1000;
 }
 
 .navbar .shadow {
@@ -364,7 +366,6 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	z-index: 998;
 }
 
 .section:last-child .content:nth-child(1) {

@@ -6,11 +6,12 @@ body {
 /* Sections */
 
 .section:nth-child(1) {
+	position: relative;
+	top: 0;
 	background: black url("../../Resources/Stock-Images/background-3.jpg") no-repeat;
 	background-position: 0 -50vh;
 	background-size: cover;
-	backdrop-filter: blur(50px);
-	height: 105vh;
+	height: 100vh;
 	width: 100%;
 	overflow: hidden;
 }
@@ -20,17 +21,93 @@ body {
 .notification-outer {
 	position: absolute;
 	top: 0;
-	right: 0;
-	height: 200vh;
+	height: 100vh;
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	justify-content: end;
 	align-items: end;
+	z-index: 999;
 	pointer-events: none;
 }
 
 .notification-outer .notification-inner {
-	
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 85vh;
+	width: 50vh;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: end;
+	align-items: center;
+}
+
+.notification-outer .notification-inner .notif-card {
+	background: rgb(198, 128, 30);
+	border-radius: 10px;
+	height: 15%;
+	width: 95%;
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.notification-outer .notification-inner .notif-card img {
+	filter: brightness(0) saturate(100%) invert(32%) sepia(23%) saturate(1402%) hue-rotate(355deg) brightness(95%) contrast(98%);
+	flex: 20%;
+	justify-self: start;
+	height: 50px;
+}
+
+.notification-outer .notification-inner .notif-card .text_content {
+	flex: 60%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.notification-outer .notification-inner .notif-card .text_content span {
+	width: 100%;
+	color: #784d12;
+}
+
+.notification-outer .notification-inner .notif-card .text_content span:first-child {
+	flex: 40%;
+	font-family: "Poppins-Black";
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	display: flex;
+	align-items: end;
+}
+
+.notification-outer .notification-inner .notif-card .text_content span:last-child {
+	flex: 50%;
+	width: 80%;
+	font-size: 0.7rem;
+}
+
+.notification-outer .notification-inner .notif-card .exit {
+	flex: 20%;
+	height: 100%;
+	cursor: pointer;
+	background: #784d12;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.notification-outer .notification-inner .notif-card .exit img {
+	filter: brightness(0) saturate(100%) invert(45%) sepia(100%) saturate(394%) hue-rotate(356deg) brightness(98%) contrast(90%);
+	height: 30px;
+	transition: all 0.3s;
+}
+
+.notification-outer .notification-inner .notif-card .exit:hover img {
+	height: 45px;
 }
 
 .login-s_1-background-blur {
@@ -51,7 +128,6 @@ body {
 	flex-direction: column;
 	align-items: center;
 	backdrop-filter: blur(10px);
-	z-index: -1;
 }
 
 .section:nth-child(1) .background .container {
