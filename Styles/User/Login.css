@@ -53,6 +53,15 @@ body {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	pointer-events: all;
+}
+
+.login-s_1-notif-show {
+	animation: login-s_1-notif-show 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+}
+
+.login-s_1-notif-hide {
+	animation: login-s_1-notif-hide 0.2s cubic-bezier(0.600, -0.280, 0.735, 0.045) forwards;
 }
 
 .notification-outer .notification-inner .notif-card img {

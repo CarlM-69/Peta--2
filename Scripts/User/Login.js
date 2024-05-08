@@ -15,8 +15,7 @@ function sha256(pass) {
 function createNotif(title, message) {
 	let newNotif = document.createElement("div");
 	newNotif.classList.add("notif-card");
-
-	console.log(title, message);
+	newNotif.classList.add("login-s_1-notif-show");
 
 	newNotif.innerHTML = `
 	<img src="../../Resources/Icons/exclamation.svg">
@@ -30,8 +29,21 @@ function createNotif(title, message) {
 	`;
 	notification_container.appendChild(newNotif);
 
+	function removeNotif() {
+		newNotif.classList.remove("login-s_1-notif-show");
+		newNotif.classList.add("login-s_1-notif-hide");
+
+		setTimeout(function() {
+			newNotif.remove(); 
+		}, 500);
+	}
+
+	newNotif.addEventListener("click", function() {
+		removeNotif();
+	});
+
 	setTimeout(function() {
-		newNotif.remove();
+		removeNotif();
 	}, 5000);
 }
 
@@ -72,13 +84,18 @@ window.addEventListener("DOMContentLoaded", function() {
 
 		if(login_username_input.value.length <= 0) {
 			createNotif(
-				"Username not Found!",
-				"Make sure that you typed your username correctly."
+				"Enter your username",
+				"You can't login without your username."
 			);
+			return;
 		}
 
 		if(login_password_input.value.length <= 0) {
-			
+			createNotif(
+				"Password Required",
+				"You must type the password."
+			);
+			return;
 		}
 
 		var request = indexedDB.open("Users", 2);
@@ -93,18 +110,38 @@ window.addEventListener("DOMContentLoaded", function() {
 				if(cursor) {
 					var user = cursor.value;
 
-					if(user.is_Logged == 1) {
-						user.is_Logged = 0;
-
-						cursor.update(user);
+					if(user) {
+						if(user.username.toLowerCase() == login_username_input.value.toLowerCase()) {
+							if(user.password == sha256(login_password_input.value)) {
+								user.is_Logged = 1;
+	
+								cursor.update(user);
+							}
+							else {
+								createNotif(
+									"Incorrect Password",
+									"Make sure that you typed your password correctly."
+								);
+								return;
+							}
+						}
+					}
+					else {
+						createNotif(
+							"Username not Found",
+							"Make sure that your username is correct."
+						);
 					}
 
-					cursor.continue();
+					cursor.continue;
 				}
 				else {
-
+					createNotif(
+						"Username not Found",
+						"Make sure that your username is correct."
+					);
 				}
-			}
+			};
 		}
 	});
 });

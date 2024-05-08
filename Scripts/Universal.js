@@ -28,23 +28,25 @@ window.addEventListener("DOMContentLoaded", function() {
 		cursor.onsuccess = function(e_event) {
 			const users = e_event.target.result;
 
-			for(const user in users) {
-				if(users[user].is_Logged == 1) {
-					var greetings = [
-						"Hi", "Hello", "Good Day",
-						"Good to see you", "Greetings",
-						"Hey", "Hi there", "Welcome"
-					];
-					var get_name = users[user].fullname;
-					const first_name = get_name.split(" ");
-
-					username_display.innerHTML = `${ greetings[Math.floor(Math.random()*greetings.length)] }, ${ first_name[0] }!`;
-					login_btn.classList.add("hide");
-					register_btn.classList.add("hide");
-					username_display.classList.remove("hide");
-					logout.classList.remove("hide");
-					
-					break;
+			if(users) {
+				for(const user in users) {
+					if(users[user].is_Logged == 1) {
+						var greetings = [
+							"Hi", "Hello", "Good Day",
+							"Good to see you", "Greetings",
+							"Hey", "Hi there", "Welcome"
+						];
+						var get_name = users[user].fullname;
+						const first_name = get_name.split(" ");
+	
+						username_display.innerHTML = `${ greetings[Math.floor(Math.random()*greetings.length)] }, ${ first_name[0] }!`;
+						login_btn.classList.add("hide");
+						register_btn.classList.add("hide");
+						username_display.classList.remove("hide");
+						logout.classList.remove("hide");
+						
+						break;
+					}
 				}
 			}
 		}
