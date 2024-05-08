@@ -364,6 +364,7 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: 998;
 }
 
 .section:last-child .content:nth-child(1) {

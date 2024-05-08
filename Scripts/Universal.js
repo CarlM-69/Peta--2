@@ -1,10 +1,3 @@
-// Functions
-function sha256(pass) {
-	// It changes the "pass" to encrypted "pass" for security
-	return CryptoJS.SHA256(pass).toString(CryptoJS.enc.Hex);
-}
-
-
 // Magic
 window.addEventListener("DOMContentLoaded", function() {
 	const login_btn = document.querySelector("#login");

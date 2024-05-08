@@ -6,7 +6,8 @@
 		<link rel="icon" href="../../Resources/Icons/sfhs_logo.png" type="image/x-icon">
 		<link rel="stylesheet" href="../../Styles/Fonts.css">
 		<link rel="stylesheet" href="../../Styles/Universal.css">
-		<link rel="stylesheet" href="../../Styles/Enroll/Success.css">
+		<link rel="stylesheet" href="../../Styles/User/Login.css">
+		<link rel="stylesheet" href="../../Styles/User/Animations.css">
 
 		<title>SFHS | Login</title>
 	</head>
@@ -41,6 +42,12 @@
 				</div>
 			</div>
 
+			<div class="notification-outer">
+				<div class="notification-outer">
+					<div class="notif-card"></div>
+				</div>
+			</div>
+
 			<div class="logout-alert" id="logout-alert">
 				<div class="alert" id="logout-card">
 					<div class="alert-part">
@@ -54,8 +61,27 @@
 				</div>
 			</div>
 
-			<div class="container">
-
+			<div class="background" id="login-bg">
+				<div class="container" id="container">
+					<div class="part">
+						<img src="../../Resources/Icons/sfhs_logo.png">
+						<span>Welcome</span>
+						<span>User</span>
+					</div>
+					<div class="part">
+						<div class="content">
+							<span class="title">User Login</span>
+						</div>
+						<div class="content">
+							<form method="POST" id="login-form" name="form">
+								<label><img src="../../Resources/Icons/user-icon.svg"><input type="text" name="form" placeholder="Username" autocomplete="username" id="username-input"></label>
+								<label><img src="../../Resources/Icons/password-icon.svg"><input type="password" name="form" placeholder="Password" autocomplete="current-password" id="password-input"><img id="eye" src="../../Resources/Icons/eye-open.svg"></label>
+								<span><a href="#">Forgot Password?</a></span>
+								<input type="submit" name="form" value="Login" id="submit-btn">
+							</form>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
