@@ -6,9 +6,10 @@
 		<link rel="icon" href="../../Resources/Icons/sfhs_logo.png" type="image/x-icon">
 		<link rel="stylesheet" href="../../Styles/Fonts.css">
 		<link rel="stylesheet" href="../../Styles/Universal.css">
-		<link rel="stylesheet" href="../../Styles/Enroll/Success.css">
+		<link rel="stylesheet" href="../../Styles/User/Register.css">
+		<link rel="stylesheet" href="../../Styles/User/Animations.css">
 
-		<title>SFHS | Login</title>
+		<title>SFHS | Register</title>
 	</head>
 	<body>
 		<div class="section" id="s_1">
@@ -54,11 +55,39 @@
 				</div>
 			</div>
 
-			
+			<div class="background" id="register-bg">
+				<div class="container" id="container">
+					<div class="part">
+						<img src="../../Resources/Icons/sfhs_logo.png">
+						<span>Welcome</span>
+						<span>User</span>
+					</div>
+					<div class="part">
+						<div class="content">
+							<span class="title">User Register</span>
+						</div>
+						<div class="content">
+							<form method="POST" id="register-form" name="form">
+								<label><img src="../../Resources/Icons/user-icon.svg"><input type="text" name="form" placeholder="Create a username" autocomplete="username" id="username-input"></label>
+								<label><img src="../../Resources/Icons/user-icon.svg"><input type="text" name="form" placeholder="Enter your full name" autocomplete="name" id="fullname-input"></label>
+								<label><img src="../../Resources/Icons/envelope-solid.svg"><input type="text" name="form" placeholder="Enter your email address" autocomplete="email" id="email-input"></label>
+								<label><img src="../../Resources/Icons/password-icon.svg"><input type="password" name="form" placeholder="Create your password" autocomplete="new-password" id="password-input"><img id="eye_1" src="../../Resources/Icons/eye-open.svg"></label>
+								<label><img src="../../Resources/Icons/password-icon.svg"><input type="password" name="form" placeholder="Retype your password" autocomplete="new-password" id="password-re-input"><img id="eye_2" src="../../Resources/Icons/eye-open.svg"></label>
+								<input type="submit" name="form" value="Register" id="submit-btn">
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="notification-outer">
+				<div class="notification-inner" id="notif-container">
+				</div>
+			</div>
 		</div>
 
 		<script src="../../Scripts/Universal.js"></script>
-		<script src="../../Scripts/User/Login.js"></script>
+		<script src="../../Scripts/User/Register.js"></script>
 		
 		<div class="section last">
 			<div class="content">

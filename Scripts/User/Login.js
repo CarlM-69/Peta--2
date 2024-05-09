@@ -5,6 +5,7 @@ const login_username_input = document.querySelector("#username-input");
 const login_password_input = document.querySelector("#password-input");
 const eye_show_password_btn = document.querySelector("#eye");
 const notification_container = document.querySelector("#notif-container");
+let notifs = [];
 
 // Functions
 function sha256(pass) {

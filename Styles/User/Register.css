@@ -14,3 +14,272 @@ body {
 }
 
 /* Magic */
+
+.notification-outer {
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: end;
+	align-items: end;
+	z-index: 999;
+	pointer-events: none;
+}
+
+.notification-outer .notification-inner {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 85vh;
+	width: 50vh;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: end;
+	align-items: center;
+}
+
+.notification-outer .notification-inner .notif-card {
+	background: rgb(198, 128, 30);
+	border-radius: 10px;
+	height: 15%;
+	width: 95%;
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	pointer-events: all;
+}
+
+.register-s_1-notif-show {
+	animation: register-s_1-notif-show 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+}
+
+.register-s_1-notif-hide {
+	animation: register-s_1-notif-hide 0.2s cubic-bezier(0.600, -0.280, 0.735, 0.045) forwards;
+}
+
+.notification-outer .notification-inner .notif-card img {
+	filter: brightness(0) saturate(100%) invert(32%) sepia(23%) saturate(1402%) hue-rotate(355deg) brightness(95%) contrast(98%);
+	flex: 20%;
+	justify-self: start;
+	height: 50px;
+}
+
+.notification-outer .notification-inner .notif-card .text_content {
+	flex: 60%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.notification-outer .notification-inner .notif-card .text_content span {
+	width: 100%;
+	color: #784d12;
+}
+
+.notification-outer .notification-inner .notif-card .text_content span:first-child {
+	flex: 40%;
+	font-family: "Poppins-Black";
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	display: flex;
+	align-items: end;
+}
+
+.notification-outer .notification-inner .notif-card .text_content span:last-child {
+	flex: 50%;
+	width: 80%;
+	font-size: 0.7rem;
+}
+
+.notification-outer .notification-inner .notif-card .exit {
+	flex: 20%;
+	height: 100%;
+	cursor: pointer;
+	background: #784d12;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.notification-outer .notification-inner .notif-card .exit img {
+	filter: brightness(0) saturate(100%) invert(45%) sepia(100%) saturate(394%) hue-rotate(356deg) brightness(98%) contrast(90%);
+	height: 30px;
+	transition: all 0.3s;
+}
+
+.notification-outer .notification-inner .notif-card .exit:hover img {
+	height: 45px;
+}
+
+.register-s_1-background-blur {
+	animation: register-s_1-background-blur 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+}
+
+.register-s_1-register-show {
+	animation: register-s_1-register-show 1s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+}
+
+.section:nth-child(1) .background {
+	position: absolute;
+	top: 0;
+	height: 105vh;
+	width: 100%;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(10px);
+}
+
+.section:nth-child(1) .background .container {
+	height: 65%;
+	width: 40%;
+	margin-top: 90px;
+	background: blanchedalmond;
+	box-shadow: 0 10px 15px 0px;
+	display: flex;
+	flex-direction: row;
+	border-radius: 5px;
+	transform: translateY(100vh);
+}
+
+.section:nth-child(1) .background .container .part:nth-child(1) {
+	flex: 45%;
+	height: 100%;
+	background: rgb(34, 34, 34);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(1) img {
+	width: 150px;
+	border-bottom: 1px solid blanchedalmond;
+	padding: 0 20px 30px;
+	margin-bottom: 50px;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(1) span {
+	font-family: "Poppins-Extra-Bold";
+	font-size: 1.5rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: blanchedalmond;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) {
+	flex: 55%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(1) {
+	flex: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(1) .title {
+	font-family: "Poppins-Black";
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: rgb(34, 34, 34);
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) {
+	width: 100%;
+	flex: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form {
+	width: 85%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form input {
+	outline: 0;
+	border: 0;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form label {
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form label input {
+	width: 90%;
+	border-radius: 50px;
+	background: rgb(186, 171, 149);
+	padding: 5px;
+	padding-left: 30px;
+	transform: translateX(-8px);
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form label img {
+	position: absolute;
+	filter: brightness(0) saturate(100%) invert(10%) sepia(55%) saturate(0%) hue-rotate(273deg) brightness(88%) contrast(92%);
+	transform: translateY(8px);
+	width: 12px;
+	z-index: 1;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form label img#eye_1 {
+	width: 15px;
+	position: absolute;
+	right: 40px;
+	transform: translateY(-21px);
+	cursor: pointer;
+	opacity: 0;
+	z-index: 1;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form label img#eye_2 {
+	width: 15px;
+	position: absolute;
+	right: 40px;
+	transform: translateY(-21px);
+	cursor: pointer;
+	opacity: 0;
+	z-index: 1;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form input[type="submit"] {
+	padding: 10px 30px;
+	margin-top: 20px;
+	background: rgb(186, 171, 149);
+	border-radius: 50px;
+	color: rgb(34, 34, 34);
+	text-transform: uppercase;
+	font-family: "Poppins-Bold";
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form input[type="submit"]:hover {
+	background: rgb(128, 117, 101);
+	color: blanchedalmond;
+}
+
+.section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form input[type="submit"]:active {
+	background: rgb(34, 34, 34);
+	color: beige;
+}
