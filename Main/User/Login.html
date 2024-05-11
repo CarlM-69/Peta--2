@@ -68,7 +68,7 @@
 						</div>
 						<div class="content">
 							<form id="login-form" name="form">
-								<label><img src="../../Resources/Icons/user-icon.svg"><input type="text" name="form" placeholder="Username" autocomplete="username" id="username-input"></label>
+								<label><img src="../../Resources/Icons/user-icon.svg"><input type="text" name="form" placeholder="Username" autocomplete="username" id="username-input" onkeydown="return /^[a-zA-Z0-9\-_ ]*$/i.test(event.key);"></label>
 								<label><img src="../../Resources/Icons/password-icon.svg"><input type="password" name="form" placeholder="Password" autocomplete="current-password" id="password-input"><img id="eye" src="../../Resources/Icons/eye-open.svg"></label>
 								<span><a href="#">Forgot Password?</a></span>
 								<input type="submit" name="form" value="Login" id="submit-btn">

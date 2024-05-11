@@ -14,6 +14,8 @@
 - "Go back to top" Button
 - Background Video
 - Working Forms
+- Local Database
+- Account System (Sign In & Sign Up)
 
 ## Preview
 

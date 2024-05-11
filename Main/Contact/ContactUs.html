@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="../../Styles/Fonts.css">
 		<link rel="stylesheet" href="../../Styles/Universal.css">
 		<link rel="stylesheet" href="../../Styles/Contact/ContactUs.css">
+		<link rel="stylesheet" href="../../Styles/Contact/Animations.css">
 
 		<title>SFHS | Contact Us</title>
 	</head>
@@ -52,6 +53,17 @@
 				</div>
 			</div>
 
+			<div class="__">
+				<span>Wanna talk to help service?</span>
+				<span><a href="#s_2">Scroll down to continue.</a></span>
+			</div>
+
+			<div class="notification-outer">
+				<div class="notification-inner" id="notif-container">
+				</div>
+			</div>
+		</div>
+		<div class="section" id="s_2">
 			<div class="container">
 				<div class="card">
 					<div class="inner">
@@ -93,10 +105,10 @@
 							<span>If you have any concerns, we're here to assist you with class schedules, tech support, or any other school-related matters. Don't hesitate to reach out—we value your concerns and are eager to hear from you!</span>
 						</div>
 						<div class="divider">
-							<form name="form">
-								<label>My Name<input type="text" name="form" placeholder="Enter your name" autocomplete="name" required></label>
-								<label>My Email<input type="text" name="form" placeholder="Enter your email" autocomplete="email" required></label>
-								<label>My Concern<textarea name="form" placeholder="Enter your concern" required></textarea></label>
+							<form id="contact-form" name="form">
+								<label>My Name<input type="text" name="form" placeholder="Enter your name" autocomplete="name" id="name-input"></label>
+								<label>My Email<input type="text" name="form" placeholder="Enter your email" autocomplete="email" id="email-input"></label>
+								<label>My Concern<textarea name="form" placeholder="Enter your concern" id="concern-input"></textarea></label>
 								<input type="submit" value="SUBMIT">
 							</form>
 						</div>
@@ -106,6 +118,7 @@
 		</div>
 
 		<script src="../../Scripts/Universal.js"></script>
+		<script src="../../Scripts/Contact/ContactUs.js"></script>
 		
 		<div class="section last">
 			<div class="content">

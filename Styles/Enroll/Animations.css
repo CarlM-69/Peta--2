@@ -51,3 +51,21 @@
 		opacity: 1;
 	}
 }
+
+@keyframes enroll-s_1-notif-show {
+	0% {
+		transform: translateX(50vh);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes enroll-s_1-notif-hide {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(50vh);
+	}
+}

@@ -18,33 +18,184 @@ body {
 	);
 	height: 100vh;
 	width: 100%;
-	overflow: hidden;
+}
+
+.section:nth-child(2) {
+	background: linear-gradient(
+		to left,
+		transparent 0%,
+		rgba(0, 0, 0, 0.7) 30%,
+		rgba(0, 0, 0, 0.7) 50%,
+		rgba(0, 0, 0, 0.7) 70%,
+		transparent 100%
+	);
+	height: 100vh;
+	width: 100%;
 }
 
 /* Magic */
 
-.section:nth-child(1) .container {
-	height: 100vh;
-	width: 100vw;
-	position: relative;
+.notification-outer {
+	position: absolute;
 	top: 0;
+	height: 100vh;
+	width: 100%;
 	display: flex;
+	justify-content: end;
+	align-items: end;
+	z-index: 999;
+	pointer-events: none;
+}
+
+.notification-outer .notification-inner {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 85vh;
+	width: 50vh;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: end;
+	align-items: center;
+}
+
+.notification-outer .notification-inner .notif-card {
+	background: rgb(198, 128, 30);
+	border-radius: 10px;
+	height: 15%;
+	width: 95%;
+	margin-bottom: 15px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	pointer-events: all;
+}
+
+.contact-s_1-notif-show {
+	animation: contact-s_1-notif-show 0.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) forwards;
+}
+
+.contact-s_1-notif-hide {
+	animation: contact-s_1-notif-hide 0.2s cubic-bezier(0.600, -0.280, 0.735, 0.045) forwards;
+}
+
+.notification-outer .notification-inner .notif-card img {
+	filter: brightness(0) saturate(100%) invert(32%) sepia(23%) saturate(1402%) hue-rotate(355deg) brightness(95%) contrast(98%);
+	flex: 20%;
+	justify-self: start;
+	height: 50px;
+}
+
+.notification-outer .notification-inner .notif-card .text_content {
+	flex: 60%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 }
 
-.section:nth-child(1) .container .card {
-	margin-top: 60px;
+.notification-outer .notification-inner .notif-card .text_content span {
+	width: 100%;
+	color: #784d12;
+}
+
+.notification-outer .notification-inner .notif-card .text_content span:first-child {
+	flex: 40%;
+	font-family: "Poppins-Black";
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	display: flex;
+	align-items: end;
+}
+
+.notification-outer .notification-inner .notif-card .text_content span:last-child {
+	flex: 50%;
+	width: 80%;
+	font-size: 0.7rem;
+}
+
+.notification-outer .notification-inner .notif-card .exit {
+	flex: 20%;
+	height: 100%;
+	cursor: pointer;
+	background: #784d12;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.notification-outer .notification-inner .notif-card .exit img {
+	filter: brightness(0) saturate(100%) invert(45%) sepia(100%) saturate(394%) hue-rotate(356deg) brightness(98%) contrast(90%);
+	height: 30px;
+	transition: all 0.3s;
+}
+
+.notification-outer .notification-inner .notif-card .exit:hover img {
+	height: 45px;
+}
+
+.section:nth-child(1) .__ {
+	position: absolute;
+	top: 50vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.section:nth-child(1) .__ span:first-child {
+	font-family: "Poppins-Black";
+	font-size: 4rem;
+	text-transform: uppercase;
+	color: beige;
+	animation: s_1-title-disappear both;
+	animation-timeline: view();
+	animation-range: 50% 100%;
+}
+
+.section:nth-child(1) .__ span:last-child {
+	margin-top: 170px;
+	animation: s_1-scroll-down-disappear both;
+	animation-timeline: view();
+	animation-range: 50% 80%;
+}
+
+.section:nth-child(1) .__ span:last-child a {
+	cursor: default;
+	font-family: "Poppins-Light";
+	font-size: 0.9rem;
+	text-decoration: none;
+	color: blanchedalmond;
+}
+
+.section:nth-child(2) .container {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	animation: s_2-form-show both;
+	animation-timeline: view();
+	animation-range: 20% 45%;
+}
+
+.section:nth-child(2) .container .card {
+	margin-top: 100px;
 	height: 70%;
 	width: 60%;
-	background: radial-gradient(circle, rgba(0,0,0,1) 50%, rgb(23, 23, 23) 100%);
-	border-radius: 15px;
+	background: rgb(34, 34, 34);
+	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(1) {
+.section:nth-child(2) .container .card .inner:nth-child(1) {
 	height: 100%;
 	flex: 30%;
 	display: flex;
@@ -52,27 +203,27 @@ body {
 	align-items: center;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(2) {
+.section:nth-child(2) .container .card .inner:nth-child(2) {
 	height: 70%;
 	flex: 0.5%;
 	border-left: 1px solid beige;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) {
+.section:nth-child(2) .container .card .inner:nth-child(3) {
 	height: 100%;
 	flex: 69%;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(1) table {
+.section:nth-child(2) .container .card .inner:nth-child(1) table {
 	height: 85%;
 	width: 100%;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(1) table tr {
+.section:nth-child(2) .container .card .inner:nth-child(1) table tr {
 	width: 100%;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(1) table tr td {
+.section:nth-child(2) .container .card .inner:nth-child(1) table tr td {
 	height: 100%;
 	width: 100%;
 	padding: 0;
@@ -82,13 +233,13 @@ body {
 	align-items: center;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(1) table tr td img {
+.section:nth-child(2) .container .card .inner:nth-child(1) table tr td img {
 	filter: brightness(0) saturate(100%) invert(91%) sepia(35%) saturate(143%) hue-rotate(3deg) brightness(104%) contrast(92%);
 	width: 20px;
 	display: block;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(1) table tr td span {
+.section:nth-child(2) .container .card .inner:nth-child(1) table tr td span {
 	width: 80%;
 	color: blanchedalmond;
 	display: block;
@@ -97,25 +248,25 @@ body {
 	font-size: 1rem;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(1) table tr td span:last-child {
+.section:nth-child(2) .container .card .inner:nth-child(1) table tr td span:last-child {
 	font-size: 0.8rem;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) {
+.section:nth-child(2) .container .card .inner:nth-child(3) {
 	padding: 0 25px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) .divider:first-child {
+.section:nth-child(2) .container .card .inner:nth-child(3) .divider:first-child {
 	flex: 30%;
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) .divider:last-child {
+.section:nth-child(2) .container .card .inner:nth-child(3) .divider:last-child {
 	flex: 70%;
 	display: flex;
 	flex-direction: column;
@@ -123,7 +274,7 @@ body {
 	align-items: center;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) span:nth-child(1) {
+.section:nth-child(2) .container .card .inner:nth-child(3) span:nth-child(1) {
 	align-self: center;
 	font-family: "Poppins-Black";
 	font-size: 2rem;
@@ -131,20 +282,20 @@ body {
 	color: beige;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) span:nth-child(2) {
+.section:nth-child(2) .container .card .inner:nth-child(3) span:nth-child(2) {
 	font-family: "Poppins-Light";
 	font-size: 0.8rem;
 	color: blanchedalmond;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) form {
+.section:nth-child(2) .container .card .inner:nth-child(3) form {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) form label {
+.section:nth-child(2) .container .card .inner:nth-child(3) form label {
 	color: beige;
 	font-family: "Poppins-Light";
 	font-size: 0.9rem;
@@ -152,8 +303,8 @@ body {
 	transition: all 0.3s;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) form label input,
-.section:nth-child(1) .container .card .inner:nth-child(3) form label textarea {
+.section:nth-child(2) .container .card .inner:nth-child(3) form label input,
+.section:nth-child(2) .container .card .inner:nth-child(3) form label textarea {
 	width: 100%;
 	display: block;
 	outline: 0;
@@ -164,27 +315,27 @@ body {
 	transition: all 0.3s;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) form label textarea {
+.section:nth-child(2) .container .card .inner:nth-child(3) form label textarea {
 	height: 80px;
 	resize: none;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) form label input::placeholder,
-.section:nth-child(1) .container .card .inner:nth-child(3) form label textarea::placeholder {
-	color: rgb(202, 186, 161);
+.section:nth-child(2) .container .card .inner:nth-child(3) form label input::placeholder,
+.section:nth-child(2) .container .card .inner:nth-child(3) form label textarea::placeholder {
+	color: rgba(245, 245, 220, 0.5);
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) form label input:focus,
-.section:nth-child(1) .container .card .inner:nth-child(3) form label textarea:focus {
+.section:nth-child(2) .container .card .inner:nth-child(3) form label input:focus,
+.section:nth-child(2) .container .card .inner:nth-child(3) form label textarea:focus {
 	border-bottom: 1px solid beige;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) form label:has(> input:focus),
-.section:nth-child(1) .container .card .inner:nth-child(3) form label:has(> textarea:focus) {
+.section:nth-child(2) .container .card .inner:nth-child(3) form label:has(> input:focus),
+.section:nth-child(2) .container .card .inner:nth-child(3) form label:has(> textarea:focus) {
 	color: white;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) form input[type="submit"] {
+.section:nth-child(2) .container .card .inner:nth-child(3) form input[type="submit"] {
 	cursor: pointer;
 	align-self: center;
 	width: 30%;
@@ -194,11 +345,11 @@ body {
 	font-size: 1.2rem;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) form input[type="submit"]:hover {
+.section:nth-child(2) .container .card .inner:nth-child(3) form input[type="submit"]:hover {
 	background: bisque;
 }
 
-.section:nth-child(1) .container .card .inner:nth-child(3) form input[type="submit"]:active {
+.section:nth-child(2) .container .card .inner:nth-child(3) form input[type="submit"]:active {
 	background: rgb(98, 89, 79);
 	color: beige;
 }
