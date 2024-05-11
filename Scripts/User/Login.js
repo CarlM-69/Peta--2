@@ -133,8 +133,6 @@ window.addEventListener("DOMContentLoaded", function() {
 				if(cursor) {
 					var user = cursor.value;
 
-					console.log(user);
-
 					if(user.username.toLowerCase() == login_username_input.value.toLowerCase()) {
 						if(user.password == sha256(login_password_input.value)) {
 							user.is_Logged = 1;

@@ -23,9 +23,8 @@ window.addEventListener("DOMContentLoaded", function() {
 		const db = event.target.result;
 		const transaction = db.transaction("Users", "readonly");
 		const objectStore = transaction.objectStore("Users");
-		const cursor = objectStore.getAll();
 
-		cursor.onsuccess = function(e_event) {
+		objectStore.getAll().onsuccess = function(e_event) {
 			const users = e_event.target.result;
 
 			if(users) {

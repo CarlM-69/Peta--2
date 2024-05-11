@@ -233,7 +233,7 @@ img {
 .navbar .portal {
 	flex: 25%;
 	display: flex;
-	justify-content: center;
+	justify-content: start;
 }
 
 .navbar .logo img {

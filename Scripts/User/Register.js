@@ -215,6 +215,14 @@ window.addEventListener("DOMContentLoaded", function() {
 			return;
 		}
 
+		if(register_password_input.value.length < 7) {
+			createNotif(
+				"Password Too Short",
+				"Password must not be shorter than 7 characters."
+			);
+			return;
+		}
+
 		if(register_confirm_password_input.value.length <= 0) {
 			createNotif(
 				"Confirm Password",
@@ -236,23 +244,47 @@ window.addEventListener("DOMContentLoaded", function() {
 
 		request.onsuccess = function(event) {
 			const db = event.target.result;
-			const transaction = db.transaction("Users", "readwrite");
+			const transaction = db.transaction("Users", "readonly");
 			const objectStore = transaction.objectStore("Users");
-			var user_fullname;
-			
-			if(register_middle_name_input.value.length > 0) { user_fullname = `${ register_given_name_input.value } ${ register_middle_name_input.value } ${ register_surname_input.value }`; }
-			else { user_fullname = `${ register_given_name_input.value } ${ register_surname_input.value }`; }
 
-			var userData = {
-				"fullname": user_fullname,
-				"username": register_username_input.value,
-				"email": register_email_input.value,
-				"password": sha256(register_password_input.value),
-				"is_Logged": 0
-			};
+			objectStore.getAll().onsuccess = function(e_event) {
+				var users = e_event.target.result;
 
-			objectStore.add(userData);
-			window.location.href = "./Register-Success.html";
+				if(users) {
+					for(const user in users) {
+						if(users[user].username.toLowerCase() == register_username_input.value.toLowerCase()) {
+							createNotif(
+								"Username Taken",
+								"That username is already taken."
+							);
+							return;
+						}
+					}
+
+					var request_1 = indexedDB.open("Users", 2);
+
+					request_1.onsuccess = function(e_e_event) {
+						const db = event.target.result;
+						const transaction_1 = db.transaction("Users", "readwrite");
+						const objectStore_1 = transaction_1.objectStore("Users");
+						var user_fullname;
+
+						if(register_middle_name_input.value.length > 0) { user_fullname = `${ register_given_name_input.value } ${ register_middle_name_input.value } ${ register_surname_input.value }`; }
+						else { user_fullname = `${ register_given_name_input.value } ${ register_surname_input.value }`; }
+
+						var userData = {
+							"fullname": user_fullname,
+							"username": register_username_input.value,
+							"email": register_email_input.value,
+							"password": sha256(register_password_input.value),
+							"is_Logged": 0
+						};
+
+						objectStore_1.add(userData);
+						window.location.href = "./Register-Success.html";
+					}
+				}
+			}
 		}
 	});
 });
