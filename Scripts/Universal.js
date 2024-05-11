@@ -84,7 +84,6 @@ window.addEventListener("DOMContentLoaded", function() {
 
 					if(user.is_Logged == 1) {
 						user.is_Logged = 0;
-
 						cursor.update(user);
 
 						setTimeout(function() {

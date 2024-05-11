@@ -10,7 +10,6 @@ let submit_debounce = false;
 
 // Functions
 function sha256(pass) {
-	// It changes the "pass" to encrypted "pass" for security
 	return CryptoJS.SHA256(pass).toString(CryptoJS.enc.Hex);
 }
 
@@ -29,7 +28,7 @@ function createNotif(title, message) {
 			if(idx != -1) { notifs.splice(idx, 1); }
 
 			notif.remove();
-		}, 600);
+		}, 550);
 	}
 
 	if(notifs.length >= 5) {
@@ -101,7 +100,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 			setTimeout(function() {
 				submit_debounce = false;
-			}, 700);
+			}, 650);
 		}
 		else return;
 

@@ -1,0 +1,79 @@
+body {
+	background: black url("../../Resources/Stock-Images/background.png") no-repeat center bottom;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow-x: hidden;
+}
+
+/* Sections */
+
+.section:nth-child(1) {
+	height: 100vh;
+	width: 100%;
+	overflow: hidden;
+}
+
+/* Magic */
+
+.section:nth-child(1) .title {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 25px;
+}
+
+.section:nth-child(1) .shadow-content {
+	z-index: -999;
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+}
+
+.section:nth-child(1) .shadow-content .shadow {
+	position: absolute;
+	top: 0;
+	left: -30vw;
+	height: 150vh;
+	width: 100vw;
+	background: linear-gradient(
+		to bottom,
+		black 0%,
+		rgba(0, 0, 0, 0.5) 70%,
+		transparent
+	);
+	transform: rotate(-130deg);
+}
+
+.section:nth-child(1) .title span:nth-child(1) {
+	color: beige;
+	font-family: "Poppins-Black";
+	font-size: 4rem;
+	margin-bottom: 5px;
+}
+
+.section:nth-child(1) .title span:nth-child(1) span {
+	display: block;
+	font-size: 4.1rem;
+	margin-top: -20px;
+}
+
+.section:nth-child(1) .title span:nth-child(2) {
+	width: 49%;
+	color: blanchedalmond;
+	font-family: "Poppins-Light";
+	font-size: 0.9rem;
+}
+
+.section:nth-child(1) .title span:nth-child(2) a {
+	color: bisque;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.section:nth-child(1) .title span:nth-child(2) a:hover {
+	color: burlywood;
+}

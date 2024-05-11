@@ -219,8 +219,7 @@ body {
 
 .section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form span {
 	align-self: end;
-	margin-bottom: 100px;
-	margin-right: 10px;
+	margin: -25px 10px 100px 0;
 }
 
 .section:nth-child(1) .background .container .part:nth-child(2) .content:nth-child(2) form span:hover a {

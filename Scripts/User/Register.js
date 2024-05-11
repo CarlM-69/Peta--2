@@ -11,12 +11,11 @@ const register_confirm_password_input = document.querySelector("#confirm-passwor
 const eye_1_show_password_btn = document.querySelector("#eye_1");
 const eye_2_show_password_btn = document.querySelector("#eye_2");
 const notification_container = document.querySelector("#notif-container");
-const notifs = [];
+var notifs = [];
 let submit_debounce = false;
 
 // Functions
 function sha256(pass) {
-	// It changes the "pass" to encrypted "pass" for security
 	return CryptoJS.SHA256(pass).toString(CryptoJS.enc.Hex);
 }
 
@@ -35,7 +34,7 @@ function createNotif(title, message) {
 			if(idx != -1) { notifs.splice(idx, 1); }
 
 			notif.remove();
-		}, 600);
+		}, 550);
 	}
 
 	if(notifs.length >= 5) {
@@ -130,7 +129,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 			setTimeout(function() {
 				submit_debounce = false;
-			}, 700);
+			}, 650);
 		}
 		else return;
 
@@ -166,6 +165,48 @@ window.addEventListener("DOMContentLoaded", function() {
 			return;
 		}
 
+		var email_pattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i;
+    	var is_email_valid = email_pattern.test(register_email_input.value);
+
+		if(!is_email_valid) {
+			createNotif(
+				"Invalid Email",
+				"Make sure your email is correct."
+			);
+			return;
+		}
+		else {
+			var email = register_email_input.value.toLowerCase();
+			let valid_email = false;
+			const validEmails = [
+				"@gmail.com",
+				"@yahoo.com",
+				"@outlook.com",
+				"@hotmail.com",
+				"@depedqc.ph",
+				"@ncr2.deped.gov.ph",
+				"@gov.deped.ph",
+				"@deped.gov.ph",
+				"@deped.ph",
+				"@deped.gov.ph",
+				".deped.gov.ph"
+			];
+
+			for(let i = 0; i < validEmails.length; i++) {
+				if(email.includes(validEmails[i])) {
+					valid_email = true;
+				}
+			}
+
+			if(!valid_email) {
+				createNotif(
+					"Invalid Email",
+					"Make sure your email is correct."
+				);
+				return;
+			}
+		}
+
 		if(register_password_input.value.length <= 0) {
 			createNotif(
 				"Password Not Found",
@@ -182,7 +223,8 @@ window.addEventListener("DOMContentLoaded", function() {
 			return;
 		}
 
-		if(register_username_input.value != register_confirm_password_input.value) {
+		if(register_password_input.value != register_confirm_password_input.value) {
+			console.log()
 			createNotif(
 				"Confirm Password",
 				"Password and confirm password must match."
@@ -196,41 +238,21 @@ window.addEventListener("DOMContentLoaded", function() {
 			const db = event.target.result;
 			const transaction = db.transaction("Users", "readwrite");
 			const objectStore = transaction.objectStore("Users");
+			var user_fullname;
+			
+			if(register_middle_name_input.value.length > 0) { user_fullname = `${ register_given_name_input.value } ${ register_middle_name_input.value } ${ register_surname_input.value }`; }
+			else { user_fullname = `${ register_given_name_input.value } ${ register_surname_input.value }`; }
 
-			objectStore.openCursor().onsuccess = function(e_event) {
-				var cursor = e_event.target.result;
+			var userData = {
+				"fullname": user_fullname,
+				"username": register_username_input.value,
+				"email": register_email_input.value,
+				"password": sha256(register_password_input.value),
+				"is_Logged": 0
+			};
 
-				if(cursor) {
-					var user = cursor.value;
-
-					console.log(user);
-
-					if(user.username.toLowerCase() == register_username_input.value.toLowerCase()) {
-						if(user.password == sha256(register_password_input.value)) {
-							user.is_Logged = 1;
-							cursor.update(user);
-
-							window.location.href = "./register-Success.html";
-							return;
-						}
-						else {
-							createNotif(
-								"Incorrect Password",
-								"Make sure that you typed your password correctly."
-							);
-							return;
-						}
-					}
-
-					cursor.continue();
-				}
-				else {
-					createNotif(
-						"Username not Found",
-						"Make sure that your username is correct."
-					);
-				}
-			}
+			objectStore.add(userData);
+			window.location.href = "./Register-Success.html";
 		}
 	});
 });
