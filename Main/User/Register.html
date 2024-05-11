@@ -67,12 +67,22 @@
 							<span class="title">User Register</span>
 						</div>
 						<div class="content">
-							<form method="POST" id="register-form" name="form">
-								<label><img src="../../Resources/Icons/user-icon.svg"><input type="text" name="form" placeholder="Create a username" autocomplete="username" id="username-input"></label>
-								<label><img src="../../Resources/Icons/user-icon.svg"><input type="text" name="form" placeholder="Enter your full name" autocomplete="name" id="fullname-input"></label>
-								<label><img src="../../Resources/Icons/envelope-solid.svg"><input type="text" name="form" placeholder="Enter your email address" autocomplete="email" id="email-input"></label>
-								<label><img src="../../Resources/Icons/password-icon.svg"><input type="password" name="form" placeholder="Create your password" autocomplete="new-password" id="password-input"><img id="eye_1" src="../../Resources/Icons/eye-open.svg"></label>
-								<label><img src="../../Resources/Icons/password-icon.svg"><input type="password" name="form" placeholder="Retype your password" autocomplete="new-password" id="password-re-input"><img id="eye_2" src="../../Resources/Icons/eye-open.svg"></label>
+							<form id="register-form" name="form">
+								<div class="row">
+									<label>Surname<input type="text" name="form" placeholder="Surname" autocomplete="family-name" id="surname-input"></label>
+									<label>Given Name<input type="text" name="form" placeholder="Given Name" autocomplete="given-name" id="given-name-input"></label>
+									<label>Middle Name<input type="text" name="form" placeholder="Middle Name" autocomplete="additional-name" id="middle-name-input"></label>
+								</div>
+								<div class="row">
+									<label>Username<input type="text" name="form" placeholder="Username" autocomplete="username" id="username-input"></label>
+								</div>
+								<div class="row">
+									<label>Email Address<input type="text" name="form" placeholder="Email Address" autocomplete="email" id="email-input"></label>
+								</div>
+								<div class="row">
+									<label>Password<input type="password" name="form" placeholder="Password" autocomplete="new-password" id="password-input"><img id="eye_1" src="../../Resources/Icons/eye-open.svg"></label>
+									<label>Confirm Password<input type="password" name="form" placeholder="Confirm Password" autocomplete="new-password" id="confirm-password-input"><img id="eye_2" src="../../Resources/Icons/eye-open.svg"></label>
+								</div>
 								<input type="submit" name="form" value="Register" id="submit-btn">
 							</form>
 						</div>

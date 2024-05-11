@@ -39,7 +39,7 @@ window.addEventListener("DOMContentLoaded", function() {
 						var get_name = users[user].fullname;
 						const first_name = get_name.split(" ");
 	
-						username_display.innerHTML = `${ greetings[Math.floor(Math.random()*greetings.length)] }, ${ first_name[0] }!`;
+						username_display.innerHTML = `${ greetings[Math.floor(Math.random() * greetings.length)] }, ${ first_name[0] }!`;
 						login_btn.classList.add("hide");
 						register_btn.classList.add("hide");
 						username_display.classList.remove("hide");
@@ -75,9 +75,10 @@ window.addEventListener("DOMContentLoaded", function() {
 			const db = event.target.result;
 			const transaction = db.transaction("Users", "readwrite");
 			const objectStore = transaction.objectStore("Users");
-			const cursor = objectStore.openCursor();
 
-			cursor.onsuccess = function(e_event) {
+			objectStore.openCursor().onsuccess = function(e_event) {
+				var cursor = e_event.target.result;
+
 				if(cursor) {
 					var user = cursor.value;
 
@@ -85,6 +86,10 @@ window.addEventListener("DOMContentLoaded", function() {
 						user.is_Logged = 0;
 
 						cursor.update(user);
+
+						setTimeout(function() {
+							window.location.reload();
+						}, 550);
 					}
 
 					cursor.continue();

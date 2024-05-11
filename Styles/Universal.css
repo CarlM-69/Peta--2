@@ -11,6 +11,10 @@ body {
 	margin: 0;
 }
 
+img {
+	-webkit-user-drag: none;
+}
+
 /* logout-alert */
 
 .logout-alert {
@@ -292,7 +296,8 @@ body {
 }
 
 .navbar .portal ul li#logout {
-	color: rgb(144, 14, 14);
+	color: rgb(157, 14, 14);
+	font-family: "Poppins-Bold";
 	transition: all 0.3s;
 }
 
