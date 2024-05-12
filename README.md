@@ -17,13 +17,6 @@
 - Local Database
 - Account System (Sign In & Sign Up)
 
-## Preview
-
-![image](https://github.com/CarlM-69/Peta--2/assets/73862565/15428fcd-6555-45e8-8f1e-b51d26387830)
-![b-min](https://github.com/CarlM-69/Peta--2/assets/73862565/73bef510-319b-46b8-8738-4e85084e8bb3)
-
-
-
 ## Developer:
 
 - Facebook: [@carlmathewgabay](https://www.facebook.com/carlmathewgabay)
