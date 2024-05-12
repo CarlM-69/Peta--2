@@ -10,6 +10,7 @@ const enroll_father = document.querySelector("#father-input");
 const enroll_current_address = document.querySelector("#current-address-input");
 const enroll_same_as_current = document.querySelector("#same-as-current-input");
 const enroll_permanent_address = document.querySelector("#permanent-address-input");
+const enroll_permanent_address_label = document.querySelector("#permanent-address-input-label");
 const enroll_1x1 = document.querySelector("#_1x1-input");
 const enroll_bcert = document.querySelector("#bcert-input");
 const enroll_form137 = document.querySelector("#form137-input");
@@ -67,6 +68,17 @@ function createNotif(title, message) {
 
 // Magic
 window.addEventListener("DOMContentLoaded", function() {
+	enroll_same_as_current.addEventListener("change", function() {
+		if(enroll_same_as_current.checked) {
+			enroll_permanent_address.setAttribute("disabled", true);
+			enroll_permanent_address_label.style.opacity = 0.5;
+		}
+		else {
+			enroll_permanent_address.removeAttribute("disabled");
+			enroll_permanent_address_label.style.opacity = 1;
+		}
+	});
+
 	enroll_form.addEventListener("submit", function(event) {
 		event.preventDefault();
 
@@ -79,60 +91,92 @@ window.addEventListener("DOMContentLoaded", function() {
 		}
 		else return;
 
-		if(contact_email.value.length <= 0) {
+		if(enroll_given_name.value.length <= 0) {
 			createNotif(
-				"Email is necessary!",
-				"We reply on the email you provide."
+				"Your given name",
+				"We would like to know you!"
 			);
 			return;
 		}
 
-        var email_pattern = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/i;
-    	var is_email_valid = email_pattern.test(contact_email.value);
-
-		if(!is_email_valid) {
+		if(enroll_surname.value.length <= 0) {
 			createNotif(
-				"Invalid Email",
-				"Make sure your email is correct."
+				"A family name",
+				"We want to know your surname."
 			);
 			return;
 		}
-		else {
-			var email = contact_email.value.toLowerCase();
-			let valid_email = false;
-			const validEmails = [
-				"@gmail.com",
-				"@yahoo.com",
-				"@outlook.com",
-				"@hotmail.com",
-				"@depedqc.ph",
-				"@ncr2.deped.gov.ph",
-				"@gov.deped.ph",
-				"@deped.gov.ph",
-				"@deped.ph",
-				"@deped.gov.ph",
-				".deped.gov.ph"
-			];
 
-			for(let i = 0; i < validEmails.length; i++) {
-				if(email.includes(validEmails[i])) {
-					valid_email = true;
-				}
-			}
+		if(enroll_sex.value.length <= 0) {
+			createNotif(
+				"Your sex",
+				"Are you a male or a female?"
+			);
+			return;
+		}
 
-			if(!valid_email) {
+		if(enroll_bday.value.length <= 0) {
+			createNotif(
+				"Is it your birthday?",
+				"When were you born?"
+			);
+			return;
+		}
+
+		if(enroll_number.value.length <= 0) {
+			createNotif(
+				"Contact Number",
+				"We need this for communication."
+			);
+			return;
+		}
+
+		if(enroll_mother.value.length <= 0 && enroll_father.value.length <= 0) {
+			createNotif(
+				"A Guardian",
+				"You need atleast one parent (or a guardian)."
+			);
+			return;
+		}
+
+		if(enroll_current_address.value.length <= 0) {
+			createNotif(	
+				"Your home",
+				"Where do you live?"
+			);
+			return;
+		}
+
+		if(enroll_same_as_current.checked == false) {
+			if(enroll_current_address.value.length <= 0) {
 				createNotif(
-					"Invalid Email",
-					"Make sure your email is correct."
+					"Your permanent home",
+					"Where do you permanently live?"
 				);
 				return;
 			}
 		}
 
-		if(contact_concern.value.length <= 0) {
-			createNotif(
-				"Your Concern",
-				"You can't get a help without a concern."
+		if(enroll_1x1.files.length <= 0) {
+			createNotif(	
+				"Your picture",
+				"A 1x1 is required in enrollment."
+			);
+			return;
+		}
+
+		if(enroll_bcert.files.length <= 0) {
+			createNotif(	
+				"Your Identity",
+				"Upload your birth certificate."
+			);
+			return;
+		}
+
+		if(enroll_form137.files.length <= 0) {
+			createNotif(	
+				"Your Identity",
+				"We need your grade 10 form 137."
 			);
 			return;
 		}

@@ -136,6 +136,17 @@ body {
 	height: 45px;
 }
 
+.go-back {
+	z-index: 999;
+	position: absolute;
+	bottom: -90vh;
+	right: 0;
+	height: 90%;
+	width: 10%;
+	display: flex;
+	justify-content: right;
+}
+
 .section:nth-child(1) .__ {
 	position: absolute;
 	top: 50vh;

@@ -389,3 +389,17 @@ body {
 .section:nth-child(2) form .content:last-child .part:last-child .uploads .extra:last-child input:hover {
 	background: rgb(223, 223, 205);
 }
+
+.section:nth-child(2) form .content:last-child .part:last-child .uploads .extra:last-child input[type="submit"] {
+	transition: all 0.3s;
+}
+
+.section:nth-child(2) form .content:last-child .part:last-child .uploads .extra:last-child input[type="submit"]:hover {
+	background: rgb(189, 189, 173);
+}
+
+.section:nth-child(2) form .content:last-child .part:last-child .uploads .extra:last-child input[type="submit"]:active {
+	background: rgb(84, 84, 77);
+	color: beige;
+	transform: scale(1.2);
+}
